@@ -1,6 +1,10 @@
 class Owner
   attr_reader :species
+<<<<<<< HEAD
   attr_accessor :name, :pets
+=======
+  attr_accessor :name
+>>>>>>> 7a610113092b5a9ccb54292d2d702e32357de00a
   @@all = []
 
   def initialize(species)
@@ -25,6 +29,13 @@ class Owner
     "I am a #{@species}."
   end
 
+<<<<<<< HEAD
+=======
+  def pets=
+    @pets
+  end
+
+>>>>>>> 7a610113092b5a9ccb54292d2d702e32357de00a
   def buy_fish(name)
     new_fish = Fish.new(name)
     @pets[:fishes].push(new_fish)
@@ -53,6 +64,7 @@ class Owner
   end
 
   def sell_pets
+<<<<<<< HEAD
     @pets.each {|type, array_of_pets|
       array_of_pets.each {|pet|
       pet.mood = "nervous"
@@ -64,4 +76,10 @@ class Owner
   def list_pets
      "I have #{@pets[:fishes].count} fish, #{@pets[:dogs].count} dog(s), and #{@pets[:cats].count} cat(s)."
   end
+=======
+    @pets.each {|species, pet| pet.mood="nervous"}
+    @pets = []
+  end
+
+>>>>>>> 7a610113092b5a9ccb54292d2d702e32357de00a
 end
